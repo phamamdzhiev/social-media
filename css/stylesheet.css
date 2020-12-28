@@ -1,0 +1,110 @@
+* {
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+}
+body {
+	
+	background: #2c3e50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+footer {
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+footer p {
+	font-size: 12px;
+	color: white;
+	text-align: center;
+}
+a#login-hide,
+a#register-show {
+	text-decoration: none;
+	color: white;
+	font-style: italic;
+	margin: 15px 0 0 0;
+	display: inline-block;
+}
+a#login-hide:hover,
+a#register-show:hover {
+	text-decoration: underline;
+}
+#checkbox {
+	display: none;
+}
+
+#title {
+	width: 100%;
+	margin: 15px auto;
+}
+#title h1 {
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	color:white;
+	font-size: 3rem;
+	margin: 0;
+}
+
+span {
+	font-weight: 900;
+	font-size: 15px;
+}
+.form-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+	color: white;
+
+}
+.form-wrapper input {
+	padding: 5px 25px;
+	border-radius: 7px;
+	border: 0;
+	margin-bottom: 0.5rem;
+	outline: 0;
+	width: 100%;
+}
+#login-form-wrapper {
+	position: relative;
+}
+label {
+	position: absolute;
+	z-index: 999;
+	right: 10px;
+	transform: translateY(3.5px);
+	color: gray;
+}
+.form-wrapper h3 {
+	text-transform: uppercase;
+}
+hr {
+	max-width: 300px;
+	width: 250px;
+	background: #333;
+	height: 1px;
+	margin-top: 20px;
+}
+input[type="submit"] {
+	background: #ff4040;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 2px solid #FF4020;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+}
+input[type="submit"]:hover {
+	background: transparent;
+}
+#register-form-wrapper {
+	display: none;
+}
