@@ -13,7 +13,7 @@ class Post
 	public function submitPost($body, $user_to) {
 
 		$body = strip_tags($body);
-		$body = mysqli_real_escape_string($this->con,$body);
+		$body = mysqli_real_escape_string($this->con, $body);
 		$body = str_replace("\r\n", "\n", $body);
 		$body = nl2br($body);
 		$check_if_empty = preg_replace('/\s+/', '', $body);
@@ -61,7 +61,7 @@ class Post
 				$user_to = "";
 			}
 			else {
-				$user_to_obj = new User($this->con, $row['user_to']);
+				$user_to_obj = new User($con, $row['user_to']);
 				$user_to_name = $user_to_obj->getFirstAndLastName();
 				$user_to = "to <a href='". $row['user_to'] ."'>" . $user_to_name . "</a>";
  

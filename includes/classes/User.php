@@ -7,7 +7,7 @@ class User
 	
 	public function __construct($con, $user) {
 		$this->con = $con;
-		$user_details_query = mysqli_query($con, "SELECT first_name, last_name FROM users WHERE username='$user'");
+		$user_details_query = mysqli_query($con, "SELECT first_name, last_name, username FROM users WHERE username='$user'");
 		$this->user = mysqli_fetch_array($user_details_query);
 	}
 	public function getUsername() {
@@ -30,7 +30,7 @@ class User
 		$username = $this->user['username'];
 		$query = mysqli_query($this->con, "SELECT user_closed FROM users WHERE username='$username'");
 		$row = mysqli_fetch_array($query);
-		if ($row['user_closed'] == "yes") 
+		if ($row['user_closed'] === "yes") 
 		{
 			return true;
 		}
